@@ -16,30 +16,22 @@ public class Main {
         InputStreamReader ir = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(ir);
 
-        
-        List<Integer> ab = readLineValuesAsInt(in);
+        List<Integer> bc = readLineValuesAsInt(in);
 
-        while(ab.stream().reduce((t, u) -> t + u).get() != 0 ) {
-            ab.sort((n1, n2) -> n1 - n2);
-            
-            int a = ab.get(0);
-            int b = ab.get(1);
-            int c = ab.get(0) - 1;
-            
-            while( !((a+b+c) /3 == a && (a+b+c) % 3 == 0)) {
-                c-=1;
-            }
-            
-            System.out.println(c);
-            ab = readLineValuesAsInt(in);
+        while (bc.stream().reduce((t, u) -> t + u).get() != 0) {
+            bc.sort((n1, n2) -> n1 - n2);
+
+            int b = bc.get(0), c = bc.get(1);
+
+            System.out.println(3 * b - b - c);
+            bc = readLineValuesAsInt(in);
         }
 
-        
-        
-       
     }
+
     public static List<Integer> readLineValuesAsInt(BufferedReader in) throws IOException {
-        return Arrays.asList(in.readLine().trim().split(" ")).stream().map(Integer::parseInt).collect(Collectors.toList());
+        return Arrays.asList(in.readLine().trim().split(" ")).stream().map(Integer::parseInt)
+                .collect(Collectors.toList());
     }
 
 }
