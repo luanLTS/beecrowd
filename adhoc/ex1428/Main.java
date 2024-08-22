@@ -13,9 +13,11 @@ public class Main {
         InputStreamReader ir = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(ir);
 
-        while (true) {
-            int n = Integer.parseInt(in.readLine().trim());
+        int n = Integer.parseInt(in.readLine().trim());
 
+        for (int i = 0; i < n; i++) {
+            List<Integer> nm = readLineValuesAsInt(in);
+            System.out.println((nm.get(0) / 3) * (nm.get(1) / 3));
         }
 
     }
