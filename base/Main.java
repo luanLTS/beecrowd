@@ -10,6 +10,10 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
 
+        /**
+         * BEE XXXX - Nome Exercício
+         */
+
         InputStreamReader ir = new InputStreamReader(System.in);
         BufferedReader in = new BufferedReader(ir);
 
